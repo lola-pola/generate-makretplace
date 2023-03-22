@@ -3,14 +3,6 @@ import requests
 import time
 import os
 
-# prompt = st.text_input("prompt")
-# if st.checkbox('picture'):
-#     res = openai.Image.create(
-#       prompt=prompt,
-#       n=2,
-#       size="1024x1024"
-#     )
-#     st.image(res['data'][0]['url'])
     
 def sending_picture_small(data_prompt):
     import openai 
@@ -49,7 +41,7 @@ def sending_picture(data_prompt):
     image_url = response['data'][0]['url']
     return image_url
 
-def sending_picture_azure(data_prompt):
+def sending_picture_azure(data_prompt,res="1024x1024"):
     api_base = 'https://dalliwix.openai.azure.com/'
     api_key = "3205cc0a3d1540dda9c3c9def1097c65"
     api_version = '2022-08-03-preview'
@@ -57,7 +49,7 @@ def sending_picture_azure(data_prompt):
     headers= { "api-key": api_key, "Content-Type": "application/json" }
     body = {
         "caption": data_prompt,
-        "resolution": "1024x1024"
+        "resolution": res
     }
     submission = requests.post(url, headers=headers, json=body)
     operation_location = submission.headers['Operation-Location']
