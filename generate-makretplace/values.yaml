@@ -37,7 +37,8 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: ClusterIP
+  dnsName: wix-elhay
+  type: LoadBalancer
   port: 80
 
 ingress:
@@ -77,6 +78,10 @@ autoscaling:
 
 nodeSelector: {}
 
-tolerations: []
+tolerations:
+- key: "kubernetes.azure.com/scalesetpriority"
+  operator: "Equal"
+  value: "spot"
+  effect: "NoSchedule"
 
 affinity: {}
