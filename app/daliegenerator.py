@@ -43,7 +43,7 @@ def sending_picture(data_prompt):
 
 def sending_picture_azure(data_prompt,res="1024x1024"):
     api_base = 'https://dalliwix.openai.azure.com/'
-    api_key = "3205cc0a3d1540dda9c3c9def1097c65"
+    api_key = os.environ['KEY_AZURE_AI'] 
     api_version = '2022-08-03-preview'
     url = "{}dalle/text-to-image?api-version={}".format(api_base, api_version)
     headers= { "api-key": api_key, "Content-Type": "application/json" }
