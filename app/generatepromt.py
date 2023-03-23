@@ -57,7 +57,7 @@ def generate_web(prompt):
     openai.api_type = "azure"
     openai.api_base = "https://dfgdfgdf.openai.azure.com/"
     openai.api_version = "2022-12-01"
-    openai.api_key = 'a8b8c4b3041a4b97926b705654913bb6'
+    openai.api_key =os.environ['KEY_AZURE_AI'] 
 
     response = openai.Completion.create(
     engine="gpt3chat",
@@ -84,7 +84,7 @@ def generate_data_from_turbo(prompt):
     openai.api_type = "azure"
     openai.api_base = "https://dfgdfgdf.openai.azure.com/"
     openai.api_version = "2022-12-01"
-    openai.api_key = 'a8b8c4b3041a4b97926b705654913bb6'
+    openai.api_key =os.environ['KEY_AZURE_AI'] 
 
     response = openai.Completion.create(
     engine="gpt3chat",

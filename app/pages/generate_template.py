@@ -3,13 +3,14 @@ import openai
 # from daliegenerator import sending_picture ,sending_picture_small ,sending_picture_azure
 from daliegenerator import sending_picture ,sending_picture_small ,sending_picture_azure
 st.set_page_config(page_title="generating template", page_icon="📈")
+import os
 st.markdown("# Generating Template")
 
 
 openai.api_type = "azure"
 openai.api_base = "https://dalliwix.openai.azure.com/"
 openai.api_version = "2022-12-01"
-openai.api_key = "3205cc0a3d1540dda9c3c9def1097c65"
+openai.api_key = os.environ['KEY_AZURE_AI'] 
 # Set up OpenAI API credentials
 
 # Define a function to generate text using OpenAI

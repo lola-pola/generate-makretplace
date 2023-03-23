@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 from streamlit_chat import message
 from daliegenerator import sending_picture ,sending_picture_small ,sending_picture_azure
-
+import os
 
 
 st.set_page_config(page_title="Generating Page Content", page_icon="📈")
@@ -12,7 +12,7 @@ st.markdown("# Generating Page Content")
 openai.api_type = "azure"
 openai.api_base = "https://dalliwix.openai.azure.com/"
 openai.api_version = "2022-12-01"
-openai.api_key = "3205cc0a3d1540dda9c3c9def1097c65"
+openai.api_key = os.environ['KEY_AZURE_AI'] 
 
 # Define a function to generate text using OpenAI
 def generate_text(prompt):
@@ -127,8 +127,9 @@ def app():
         with about:
            st.write(generate_text(f'generate about information add year of openning , some words abount the stuff: {prompt} '))  
  
-        with soe:
-           st.write(generate_text(f'generate key words for soe for : {prompt} '))
+        with seo:
+           st.write(generate_text(f'generate key words for seo for : {prompt} '))
+           st.write(generate_text(f'generate seo recommnadtio: {prompt} '))
         
         with support:
             if 'generated' not in st.session_state:
