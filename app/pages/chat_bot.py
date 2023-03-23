@@ -1,6 +1,8 @@
 # from streamlit_chat import message
-# import streamlit as st
+import streamlit as st
 # import openai
+
+st.image('code.png',caption='qrcode',use_column_width="always")
 
 # def generate_gpt_chat(prompt):
 #     response = openai.Completion.create(
