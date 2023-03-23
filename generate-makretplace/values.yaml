@@ -13,7 +13,7 @@ image:
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
-key: 
+key: "KEY_AZURE_AI"
 serviceAccount:
   # Specifies whether a service account should be created
   create: true
