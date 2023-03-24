@@ -92,7 +92,7 @@ def app():
 
     if st.sidebar.checkbox("Generate"):
 
-        home, catalog, community , about , support ,soe= st.tabs(["Home", "Catalog", "Community","About","Support","Soe"])
+        home, catalog, community , about , support ,seo= st.tabs(["Home", "Catalog", "Community","About","Support","Soe"])
 
         with home:
             tmp_home_prompt = "generate website home page data for:"+prompt
