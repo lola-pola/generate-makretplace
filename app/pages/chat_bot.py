@@ -1,6 +1,6 @@
-# from streamlit_chat import message
+from streamlit_chat import message
 import streamlit as st
-# import openai
+import openai
 
 st.image('code.png',caption='qrcode',use_column_width="always")
 
