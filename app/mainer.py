@@ -5,6 +5,7 @@ from daliegenerator import sending_picture ,sending_picture_small ,sending_pictu
 
 st.header("Hello WIX !!!")
 title = 'wix'
-st.image(sending_picture_azure('WIX icon beautiful realistic with snowflake super cool and shine '),caption='beautiful',use_column_width="always")
-st.image(sending_picture_azure('WIX icon carton realistic with snowflake super cool and shine '),caption='carton',use_column_width="always")
-st.image(sending_picture_azure('WIX icon fantasy realistic with snowflake super cool and shine '),caption='fantasy',use_column_width="always")
+
+texts = ['WIX icon beautiful realistic with snowflake super cool and shine ','WIX icon carton realistic with snowflake super cool and shine ','WIX icon fantasy realistic with snowflake super cool and shine ','WIX i]
+for _text in text:
+    st.image(sending_picture_azure(_text),caption=title,use_column_width="always")
