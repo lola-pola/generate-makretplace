@@ -1,6 +1,9 @@
 import streamlit as st
 from daliegenerator import sending_picture ,sending_picture_small ,sending_picture_azure
 
+
+st.write("https://github.com/lola-pola/generate-makretplace")
+
 st.image('code.png',caption='qrcode',use_column_width="always")
 
 
