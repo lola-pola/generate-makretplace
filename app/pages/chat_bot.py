@@ -9,12 +9,13 @@ openai.api_version = "2022-12-01"
 openai.api_key = os.environ['KEY_AZURE_AI'] 
 
 
+
 def generate_gpt_chat(prompt):
     response = openai.Completion.create(
         engine="gpeta",
         prompt=prompt,
-        temperature=0.5,
-        max_tokens=1024
+        temperature=1,
+        max_tokens=4000
         
         
     )
