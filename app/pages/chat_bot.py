@@ -1,8 +1,14 @@
 from streamlit_chat import message
 import streamlit as st
 import openai
-
+import os
 st.image('code.png',caption='qrcode',use_column_width="always")
+
+openai.api_type = "azure"
+openai.api_base = "https://dalliwix.openai.azure.com/"
+openai.api_version = "2022-12-01"
+openai.api_key = os.environ['KEY_AZURE_AI'] 
+
 
 def generate_gpt_chat(prompt):
     response = openai.Completion.create(
