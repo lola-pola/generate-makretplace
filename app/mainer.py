@@ -9,5 +9,5 @@ title = 'wix'
 texts = ['WIX icon beautiful realistic with snowflake super cool and shine ',
          'WIX icon carton realistic with snowflake super cool and shine ',
          'WIX icon fantasy realistic with snowflake super cool and shine ']
-for _text in text:
+for _text in texts:
     st.image(sending_picture_azure(_text),caption=title,use_column_width="always")
