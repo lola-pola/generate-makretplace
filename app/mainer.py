@@ -1,6 +1,7 @@
 import streamlit as st
 from daliegenerator import sending_picture ,sending_picture_small ,sending_picture_azure
 
+st.image('code.png',caption='qrcode',use_column_width="always")
 
 
 st.header("Hello WIX !!!")
