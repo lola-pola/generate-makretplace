@@ -3,6 +3,13 @@ from daliegenerator import sending_picture ,sending_picture_small ,sending_pictu
 
 
 st.write("https://github.com/lola-pola/generate-makretplace")
+st.write("https://github.com/lola-pola/chick-muck/tree/main/openai/labs")
+
+
+
+
+
+
 
 st.image('code.png',caption='qrcode',use_column_width="always", width=200)
 
