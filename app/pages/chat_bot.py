@@ -14,8 +14,8 @@ def generate_gpt_chat(prompt):
     response = openai.Completion.create(
         engine="gpeta",
         prompt=prompt,
-        temperature=1,
-        max_tokens=4000
+        temperature=0.5,
+        max_tokens=8000
         
         
     )
