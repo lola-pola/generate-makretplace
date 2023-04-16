@@ -5,6 +5,8 @@ from daliegenerator import sending_picture ,sending_picture_small ,sending_pictu
 import os
 
 
+
+
 st.set_page_config(page_title="Generating Page Content", page_icon="📈")
 st.markdown("# Generating Page Content")
 
