@@ -1,9 +1,10 @@
 
 
-
+import time
 
 
 def sending_prompt(prompt):
+    time.sleep(2)
     import openai
     import os
     openai.api_type = "azure"
@@ -27,6 +28,7 @@ def sending_prompt(prompt):
 
 
 def generate_code(prompt):
+    time.sleep(2)
     import openai
     import os
     openai.api_type = "azure"
@@ -52,6 +54,7 @@ def generate_code(prompt):
 
 
 def generate_web(prompt):
+    time.sleep(2)
     import os
     import openai
     openai.api_type = "azure"
@@ -79,6 +82,7 @@ def generate_web(prompt):
 
 
 def generate_data_from_turbo(prompt):
+    time.sleep(2)
     import os
     import openai
     openai.api_type = "azure"
