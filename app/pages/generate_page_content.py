@@ -3,7 +3,7 @@ import openai
 from streamlit_chat import message
 from daliegenerator import sending_picture ,sending_picture_small ,sending_picture_azure
 import os
-
+import time
 
 
 
@@ -18,6 +18,7 @@ openai.api_key = os.environ['KEY_AZURE_AI']
 
 # Define a function to generate text using OpenAI
 def generate_text(prompt):
+    time.sleep(2)
     response = openai.Completion.create(
         engine="davinci",
         prompt=prompt,
@@ -31,6 +32,7 @@ def generate_text(prompt):
 
 # Define a function to generate text using OpenAI
 def generate_gpt(prompt):
+    time.sleep(2)
     response = openai.Completion.create(
         engine="gpeta",
         prompt=prompt,
@@ -44,6 +46,7 @@ def generate_gpt(prompt):
 
 # Define a function to generate text using OpenAI
 def generate_gpt_chat(prompt):
+    time.sleep(2)
     response = openai.Completion.create(
         engine="gpeta",
         prompt=prompt,
