@@ -11,6 +11,8 @@ st.write("https://github.com/lola-pola/chick-muck/tree/main/openai/labs")
 
 
 
+
+
 st.image('code.png',caption='qrcode',use_column_width="always", width=200)
 
 
