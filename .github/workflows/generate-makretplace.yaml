@@ -8,7 +8,7 @@ env:
     ACR_RESOURCE_GROUP: elhays
     AZURE_CONTAINER_REGISTRY: databasecni
     CHART_OVERRIDE_PATH: ./generate-makretplace/values.yaml
-    CHART_OVERRIDES: image.repository=databasecni.azurecr.io/generate-makretplace,image.tag=${{ github.sha }},key=${{ secrets.KEY_AZURE_AI }}
+    CHART_OVERRIDES: image.repository=databasecni.azurecr.io/generate-makretplace,image.tag=${{ github.sha }},key=${{ secrets.KEY_AZURE_AI_WIXER }}
     CHART_PATH: ./generate-makretplace
     CLUSTER_NAME: aks-production
     CLUSTER_RESOURCE_GROUP: aks-production
