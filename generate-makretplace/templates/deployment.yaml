@@ -40,6 +40,8 @@ spec:
           env:
           - name: KEY_AZURE_AI
             value: {{ .Values.key }}
+            - name: KEY_AZURE_AI_NEW
+            value: {{ .Values.key_new }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

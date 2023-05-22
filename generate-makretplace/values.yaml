@@ -14,6 +14,7 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 key: "KEY_AZURE_AI"
+key_new: "TBD"
 serviceAccount:
   # Specifies whether a service account should be created
   create: true

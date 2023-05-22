@@ -12,13 +12,12 @@ st.markdown("# Generating Page Content")
 
 # Set up OpenAI API credentials
 openai.api_type = "azure"
-openai.api_base = "https://dalliwix.openai.azure.com/"
+openai.api_base = "https://elhays-wix.openai.azure.com/"
 openai.api_version = "2022-12-01"
-openai.api_key = os.environ['KEY_AZURE_AI'] 
+openai.api_key = os.environ['KEY_AZURE_AI_NEW'] 
 
 # Define a function to generate text using OpenAI
 def generate_text(prompt):
-    time.sleep(5)
     response = openai.Completion.create(
         engine="davinci",
         prompt=prompt,
@@ -62,7 +61,7 @@ def generate_text_dali(prompt):
     _prompt = f'Generate Dali-E descriptions from this statements "{prompt}" website template'
     response = openai.Completion.create(  
        
-        engine="davinci",
+        engine="call-center",
         prompt=_prompt,
         max_tokens=1024,
         n=1,
