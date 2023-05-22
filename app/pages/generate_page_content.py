@@ -18,6 +18,8 @@ openai.api_key = os.environ['KEY_AZURE_AI_NEW']
 
 # Define a function to generate text using OpenAI
 def generate_text(prompt):
+    import time
+    time.sleep(5)
     response = openai.Completion.create(
         engine="davinci",
         prompt=prompt,
@@ -63,10 +65,10 @@ def generate_text_dali(prompt):
        
         engine="call-center",
         prompt=_prompt,
-        max_tokens=1024,
+        max_tokens=100,
         n=1,
         stop=None,
-        temperature=1,
+        temperature=0.5,
     )
     return response.choices[0].text
 
