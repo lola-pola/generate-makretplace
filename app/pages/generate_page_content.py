@@ -19,7 +19,6 @@ openai.api_key = os.environ['KEY_AZURE_AI_NEW']
 # Define a function to generate text using OpenAI
 def generate_text(prompt):
     import time
-    time.sleep(5)
     response = openai.Completion.create(
         engine="davinci",
         prompt=prompt,
@@ -33,7 +32,6 @@ def generate_text(prompt):
 
 # Define a function to generate text using OpenAI
 def generate_gpt(prompt):
-    time.sleep(5)
     response = openai.Completion.create(
         engine="gpeta",
         prompt=prompt,
@@ -47,7 +45,6 @@ def generate_gpt(prompt):
 
 # Define a function to generate text using OpenAI
 def generate_gpt_chat(prompt):
-    time.sleep(5)
     response = openai.Completion.create(
         engine="gpeta",
         prompt=prompt,
@@ -59,7 +56,6 @@ def generate_gpt_chat(prompt):
     return response.choices[0].text
 
 def generate_text_dali(prompt):
-    time.sleep(5)
     _prompt = f'Generate Dali-E descriptions from this statements "{prompt}" website template'
     response = openai.Completion.create(  
        
@@ -77,7 +73,6 @@ def generate_text_dali(prompt):
 
 
 def generate_html(prompt):
-    time.sleep(5)
     response = openai.Completion.create(
             engine="code",
             prompt= prompt, #"<!-- Create a web page for online shop sells milkshake ' -->\n<!DOCTYPE html>",
