@@ -42,8 +42,7 @@ def sending_picture(data_prompt):
     return image_url
 
 def sending_picture_azure(data_prompt,res="1024x1024"):
-    import time
-    time.sleep(10)
+
     api_base = 'https://dalliwix.openai.azure.com/'
     api_key = os.environ['KEY_AZURE_AI'] 
     api_version = '2022-08-03-preview'
